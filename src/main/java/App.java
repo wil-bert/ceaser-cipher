@@ -17,13 +17,19 @@ public class App {
 //            System.out.println(String.format("Your encrypted text is:  %s",encoding.encode()));
 
         }
-        else if(choice == 3){
+        else if(choice == 2){
             System.out.println("Enter text to decrypt");
             String inputText = scanner.nextLine().toUpperCase();
             System.out.println("Enter key");
             int Key = scanner.nextInt();
             Decoding decoding = new Decoding(Key,inputText);
 //            System.out.println(String.format("Your decrypted text is:  %s",decoding.decode()));
+        }
+        else  if(choice == 3){
+            System.exit(0);
+        }
+        else {
+            System.out.println("Unknown input");
         }
     }
 }
