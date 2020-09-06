@@ -14,7 +14,7 @@ public class App {
             System.out.println("Enter key");
             int Key = scanner.nextInt();
             Encoding encoding = new Encoding(inputText,Key);
-//            System.out.println(String.format("Your encrypted text is:  %s",encoding.encode()));
+            System.out.println(String.format("Your encrypted text is:  %s",encoding.encode()));
 
         }
         else if(choice == 2){

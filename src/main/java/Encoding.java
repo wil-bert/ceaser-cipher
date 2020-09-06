@@ -30,20 +30,20 @@ public class Encoding {
         return mKey >1 && mKey <26;
     }
 
-    public  System encode(){
-        String encoded = "";
-        String encodedArray[] = mInputText.split("");
+    String encode(){
+        StringBuilder encoded = new StringBuilder();
+        String[] encodedArray = mInputText.split("");
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         for (int i = 0; i<encodedArray.length;i++) {
             if(mInputText.charAt(i) == ' '){
-                encoded += " ";
+                encoded.append(" ");
             }
             else {
                 int charPosition = alphabet.indexOf(mInputText.charAt(i));
                 int Key = (mKey + charPosition) % 26;
-                encoded += alphabet.charAt(Key);
+                encoded.append(alphabet.charAt(Key));
             }
         }
-        return encoded.toUpperCase();
+        return encoded.toString().toUpperCase();
     }
-}}
+}
