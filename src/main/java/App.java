@@ -23,7 +23,7 @@ public class App {
             System.out.println("Enter key");
             int Key = scanner.nextInt();
             Decoding decoding = new Decoding(Key,inputText);
-//            System.out.println(String.format("Your decrypted text is:  %s",decoding.decode()));
+            System.out.println(String.format("Your decrypted text is:  %s",decoding.decode()));
         }
         else  if(choice == 3){
             System.exit(0);
